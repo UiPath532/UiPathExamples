@@ -1,0 +1,102 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Config&Flowchart_1",
+        "dt_IncidentData&Flowchart_1",
+        "WIID&Flowchart_1",
+        "in_incident_number&Flowchart_1",
+        "txtMessage&Sequence_1",
+        "in_state&Sequence_9",
+        "in_comment&Sequence_9"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ACME/System1_Login.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "loginSuccess&Sequence_1",
+        "System1Password&Sequence_1",
+        "System1Credential&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/KillAllProcesses.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllSettings.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_SettingsAndConstants&Sequence_5",
+        "dt_Assets&Sequence_6",
+        "AssetValue&Sequence_11"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ConfigFile",
+        "in_ConfigSheets",
+        "out_Config"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ServiceNow/GetIncidentInformation.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Lines&Sequence_1",
+        "out_active&Sequence_1",
+        "out_activity_due&Sequence_1",
+        "out_approval&Sequence_1",
+        "out_caller_value&Sequence_1",
+        "out_category&Sequence_1",
+        "out_description&Sequence_1",
+        "out_due_date&Sequence_1",
+        "out_incident_number&Sequence_1",
+        "out_short_desc&Sequence_1",
+        "out_urgeny&Sequence_1",
+        "out_work_notes&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_SysID",
+        "dt_out_IncidentData"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Teams/01_SendTeamsNotification.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "GetChannelID&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Message"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    }
+  ]
+}

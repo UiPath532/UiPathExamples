@@ -1,0 +1,30 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "WaitForTasksCompletionInLoop.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ReviewComments&Sequence_1",
+        "TaskPersistData&Sequence_1",
+        "TaskDataList&Sequence_1",
+        "TaskAction&Sequence_1",
+        "TaskData&Sequence_1",
+        "TransactionItem&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_PullRequestName",
+        "in_TransactionQueueName"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    }
+  ]
+}

@@ -1,0 +1,278 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.in_PullRequestName="Vendor Add : " this:Main.in_TransactionQueueName="UiPathDemo" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:upaf="clr-namespace:UiPath.Persistence.Activities.FormTask;assembly=UiPath.Persistence.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Provides the Request name for the title of the Task Form" Name="in_PullRequestName" Type="InArgument(x:String)" />
+    <x:Property Name="in_TransactionQueueName" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1261,3629</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="50">
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Persistence.Activities.FormTask</x:String>
+      <x:String>UiPath.Persistence.Activities.Model.Task</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Persistence.Activities.BaseTask</x:String>
+      <x:String>UiPath.Persistence.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Persistence.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Template workflow creates tasks based on the sample Transaction data extracted from a queue. Once a task is created for each transaction item, the queue item status is set to successful unless it runs into an error. If it runs into an error while creating the task, log messages are created using log activities.&#xA;&#xA;Once the user complete the tasks, the workflow will give a space for you to create your logic based on the user approval and rejection status. &#xA;&#xA;Marketplace listing: https://marketplace.uipath.com/listings/long-running-workflow-template-for-task-creation" DisplayName="Wait For Some Tasks Completion in Loop" sap:VirtualizedContainerService.HintSize="1271,3564" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Holds the comments provided by the user for each task through Orchestrator" Name="ReviewComments" />
+      <Variable x:TypeArguments="upaf:FormTaskData" Name="TaskPersistData" />
+      <Variable x:TypeArguments="scg:List(upaf:FormTaskData)" sap2010:Annotation.AnnotationText="Holds the list of tasks created" Default="[New List(of UiPath.Persistence.Activities.FormTask.FormTaskData)]" Name="TaskDataList" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Holds the &quot;Approve&quot; or &quot;Reject&quot; result provided by the user for each task with in the loop associated" Name="TaskAction" />
+      <Variable x:TypeArguments="upaf:FormTaskData" sap2010:Annotation.AnnotationText="Holds the task data after user involvement.. User needs to use this variable to extract the data in the Form Task to return the data back to the process that performs tasks based on the approval or rejection status" Name="TaskData" />
+      <Variable x:TypeArguments="ui:QueueItem" sap2010:Annotation.AnnotationText="Holds the data extracted from the input queue" Name="TransactionItem" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <DoWhile DisplayName="Do While Transactions Exist" sap:VirtualizedContainerService.HintSize="1209,1999" sap2010:WorkflowViewState.IdRef="DoWhile_1">
+      <DoWhile.Condition>
+        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="TransactionItem isNot Nothing" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_2" />
+      </DoWhile.Condition>
+      <Sequence DisplayName="Process Transactions" sap:VirtualizedContainerService.HintSize="1163,1835" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1101,1727" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+          <TryCatch.Try>
+            <Sequence DisplayName="Sequence - Try" sap:VirtualizedContainerService.HintSize="1063,1499" sap2010:WorkflowViewState.IdRef="Sequence_7">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:GetQueueItem ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Items to Approve are going from the Orchestrator Queue. Each item will be extracted and placed as a Task for the user to confirm" DisplayName="Get Approval Transaction Item" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="1001,97" sap2010:WorkflowViewState.IdRef="GetQueueItem_1" QueueType="[in_TransactionQueueName]" TransactionItem="[TransactionItem]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:GetQueueItem>
+              <If Condition="[TransactionItem IsNot Nothing]" DisplayName="If Transaction Items Exist" sap:VirtualizedContainerService.HintSize="1001,1262" sap2010:WorkflowViewState.IdRef="If_4">
+                <If.Then>
+                  <Sequence DisplayName="Create Tasks for PR Review Body" sap:VirtualizedContainerService.HintSize="622,1102" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:Comment sap:VirtualizedContainerService.HintSize="560,75" sap2010:WorkflowViewState.IdRef="Comment_3" Text="// Design the Form according to the dataset returned from the queue" />
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="560,25" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,200" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[in_PullRequestName + TransactionItem.SpecificContent(&quot;Vendor ID&quot;).ToString() + TransactionItem.SpecificContent(&quot;Vendor Name&quot;).ToString() + TransactionItem.SpecificContent(&quot;Vendor City&quot;).ToString()]" />
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                    <upaf:CreateFormTask BucketFolderPath="{x:Null}" BucketName="{x:Null}" BulkFormLayout="{x:Null}" DynamicFormPath="{x:Null}" ExternalTag="{x:Null}" Labels="{x:Null}" TimeoutMs="{x:Null}" sap2010:Annotation.AnnotationText="This form is a sample form which is created based on a simple three field dataset. Your original dataset extracted from the queue might vary. In such case, please design the form accordingly and map the fields through the Form Data Collection property&#xA;&#xA;In this design, the transactionItem specific content data mapped may not be releveant to you. Upadte them as needed with your identifier names" BulkFormLayoutGuid="509825f3-1084-4855-892a-96ab08a965c2" DisplayName="Create Approval Form" EnableBulkEdit="False" EnableDynamicForms="False" EnableV2="False" FolderPath="Shared" FormLayout="%[{&quot;label&quot;:&quot;Vendor ID&quot;,&quot;widget&quot;:{&quot;format&quot;:&quot;yyyy-MM-dd hh:mm a&quot;,&quot;dateFormat&quot;:&quot;yyyy-MM-dd hh:mm a&quot;,&quot;saveAs&quot;:&quot;text&quot;},&quot;disabled&quot;:true,&quot;tableView&quot;:true,&quot;key&quot;:&quot;VendorID&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;input&quot;:true,&quot;clearOnRefresh&quot;:false,&quot;alwaysEnabled&quot;:false},{&quot;label&quot;:&quot;Vendor Name&quot;,&quot;widget&quot;:{&quot;format&quot;:&quot;yyyy-MM-dd hh:mm a&quot;,&quot;dateFormat&quot;:&quot;yyyy-MM-dd hh:mm a&quot;,&quot;saveAs&quot;:&quot;text&quot;},&quot;disabled&quot;:true,&quot;tableView&quot;:true,&quot;key&quot;:&quot;VendorName&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;alwaysEnabled&quot;:false,&quot;input&quot;:true,&quot;clearOnRefresh&quot;:false},{&quot;label&quot;:&quot;Vendor Address&quot;,&quot;widget&quot;:{&quot;format&quot;:&quot;yyyy-MM-dd hh:mm a&quot;,&quot;dateFormat&quot;:&quot;yyyy-MM-dd hh:mm a&quot;,&quot;saveAs&quot;:&quot;text&quot;},&quot;disabled&quot;:true,&quot;tableView&quot;:true,&quot;key&quot;:&quot;VendorAddress&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;alwaysEnabled&quot;:false,&quot;input&quot;:true,&quot;clearOnRefresh&quot;:false},{&quot;label&quot;:&quot;Review Comment&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;key&quot;:&quot;Review Comment&quot;,&quot;input&quot;:true,&quot;tableView&quot;:true,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;widget&quot;:{&quot;format&quot;:&quot;yyyy-MM-dd hh:mm a&quot;,&quot;dateFormat&quot;:&quot;yyyy-MM-dd hh:mm a&quot;,&quot;saveAs&quot;:&quot;text&quot;},&quot;clearOnRefresh&quot;:false,&quot;alwaysEnabled&quot;:false},{&quot;mask&quot;:false,&quot;customClass&quot;:&quot;uipath-button-container&quot;,&quot;tableView&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;table&quot;,&quot;input&quot;:false,&quot;key&quot;:&quot;key&quot;,&quot;label&quot;:&quot;label&quot;,&quot;rows&quot;:[[{&quot;components&quot;:[{&quot;label&quot;:&quot;Approve&quot;,&quot;theme&quot;:&quot;success&quot;,&quot;disableOnInvalid&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;button&quot;,&quot;key&quot;:&quot;approve&quot;,&quot;input&quot;:true,&quot;tableView&quot;:true,&quot;showValidations&quot;:false,&quot;reorder&quot;:false,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;widget&quot;:null,&quot;clearOnRefresh&quot;:false}]},{&quot;components&quot;:[{&quot;label&quot;:&quot;Reject&quot;,&quot;theme&quot;:&quot;danger&quot;,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;button&quot;,&quot;input&quot;:true,&quot;key&quot;:&quot;reject&quot;,&quot;tableView&quot;:true,&quot;showValidations&quot;:false,&quot;reorder&quot;:false,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;widget&quot;:null,&quot;clearOnRefresh&quot;:false}]},{&quot;components&quot;:[]},{&quot;components&quot;:[]},{&quot;components&quot;:[]},{&quot;components&quot;:[]}]],&quot;numRows&quot;:1,&quot;numCols&quot;:6,&quot;reorder&quot;:false,&quot;labelWidth&quot;:30,&quot;labelMargin&quot;:3,&quot;clearOnRefresh&quot;:false}]" FormLayoutGuid="b0b4a182-a619-4070-ab30-1b7895a32518" GenerateInputFields="True" sap:VirtualizedContainerService.HintSize="560,474" sap2010:WorkflowViewState.IdRef="CreateFormTask_2" TaskCatalog="[&quot;UiPathDemo&quot;]" TaskOutput="[TaskPersistData]" TaskPriority="[TaskPriority.Medium]" TaskTitle="[in_PullRequestName + TransactionItem.SpecificContent(&quot;company_name&quot;).ToString]">
+                      <upaf:CreateFormTask.FormData>
+                        <InArgument x:TypeArguments="x:String" x:Key="VendorID">[TransactionItem.SpecificContent("company_name").ToString]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="VendorName">[TransactionItem.SpecificContent("employer_identification_number").ToString]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="VendorAddress">[TransactionItem.SpecificContent("company_name").ToString]</InArgument>
+                        <OutArgument x:TypeArguments="x:String" x:Key="Review Comment">[ReviewComments]</OutArgument>
+                      </upaf:CreateFormTask.FormData>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </upaf:CreateFormTask>
+                    <AddToCollection x:TypeArguments="upaf:FormTaskData" Collection="[TaskDataList]" DisplayName="Add To task_data_list" sap:VirtualizedContainerService.HintSize="560,25" sap2010:WorkflowViewState.IdRef="AddToCollection`1_2" Item="[TaskPersistData]" />
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="560,267" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,188" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:SetTransactionStatus ContinueOnError="{x:Null}" Reason="{x:Null}" ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Set Transaction Status" ErrorType="Business" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="354,80" sap2010:WorkflowViewState.IdRef="SetTransactionStatus_1" Status="Successful" TransactionItem="[TransactionItem]">
+                            <ui:SetTransactionStatus.Analytics>
+                              <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+                            </ui:SetTransactionStatus.Analytics>
+                            <ui:SetTransactionStatus.Output>
+                              <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+                            </ui:SetTransactionStatus.Output>
+                          </ui:SetTransactionStatus>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                    </ui:CommentOut>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <ui:LogMessage DisplayName="Log Message - No Transactions" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;End of Transaction Items&quot;]" />
+                </If.Else>
+              </If>
+            </Sequence>
+          </TryCatch.Try>
+          <TryCatch.Catches>
+            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="1067,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ActivityAction x:TypeArguments="s:Exception">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Sequence - Exception" sap:VirtualizedContainerService.HintSize="449,245" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:SetTransactionStatus ContinueOnError="{x:Null}" ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" Details="[&quot;Value Items of transaction: &quot; + TransactionItem.SpecificContent(&quot;ValueItem1&quot;).ToString + &quot; | &quot; + TransactionItem.SpecificContent(&quot;ValueItem2&quot;).ToString]" DisplayName="Set Transaction Status" ErrorType="Application" sap:VirtualizedContainerService.HintSize="387,80" sap2010:WorkflowViewState.IdRef="SetTransactionStatus_2" Reason="Error In Creating Task for Transaction" Status="Failed" TransactionItem="[TransactionItem]">
+                    <ui:SetTransactionStatus.Analytics>
+                      <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+                    </ui:SetTransactionStatus.Analytics>
+                    <ui:SetTransactionStatus.Output>
+                      <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+                    </ui:SetTransactionStatus.Output>
+                  </ui:SetTransactionStatus>
+                  <ui:AddLogFields DisplayName="Add Log Fields" sap:VirtualizedContainerService.HintSize="387.2,24.8" sap2010:WorkflowViewState.IdRef="AddLogFields_1">
+                    <ui:AddLogFields.Fields>
+                      <InArgument x:TypeArguments="x:String" x:Key="Log Message">[exception.Message]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="Log Trace">[exception.StackTrace]</InArgument>
+                    </ui:AddLogFields.Fields>
+                  </ui:AddLogFields>
+                </Sequence>
+              </ActivityAction>
+            </Catch>
+          </TryCatch.Catches>
+        </TryCatch>
+      </Sequence>
+    </DoWhile>
+    <ParallelForEach x:TypeArguments="upaf:FormTaskData" DisplayName="Wait For Task(s) Completion" sap:VirtualizedContainerService.HintSize="1171.2,1320" sap2010:WorkflowViewState.IdRef="ParallelForEach`1_3" Values="[TaskDataList]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ActivityAction x:TypeArguments="upaf:FormTaskData">
+        <ActivityAction.Argument>
+          <DelegateInArgument x:TypeArguments="upaf:FormTaskData" Name="item" />
+        </ActivityAction.Argument>
+        <Sequence DisplayName="Wait For Tasks Completion Body" sap:VirtualizedContainerService.HintSize="1005.6,1170.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <upaf:WaitForFormTaskAndResume StatusMessage="{x:Null}" TimeoutMs="{x:Null}" WaitItemDataObject="{x:Null}" DisplayName="Wait for Form Task and Resume" sap:VirtualizedContainerService.HintSize="943.2,222.4" sap2010:WorkflowViewState.IdRef="WaitForFormTaskAndResume_1" TaskAction="[TaskAction]" TaskInput="[item]" TaskOutput="[TaskData]" />
+          <If Condition="[TaskAction=&quot;approve&quot;]" DisplayName="If (TaskAction=&quot;approve&quot;)" sap:VirtualizedContainerService.HintSize="943.2,796" sap2010:WorkflowViewState.IdRef="If_2">
+            <If.Then>
+              <Sequence DisplayName="Approval Task Sequence" sap:VirtualizedContainerService.HintSize="449.6,636" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:Comment sap:VirtualizedContainerService.HintSize="387.2,421.6" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// The activities that are supposed to happen once the task item is APPROVED should come in this section. This could be:&#xA;&#xA;1. Assigning the details of the task item to another queue so that Approval process flow can be handled through another workflow process&#xA;&#xA;2. Adding data to a excel file so that another process can take over&#xA;&#xA;Ideally, what should happen after approval or rejection should be handled through another process. &#xA;&#xA;Note: For the other process to know what was the approval result, pass on the TaskAction along with rest of the data which can be derived from TaskData variable" />
+                <WriteLine DisplayName="Write ReviewComments value after resuming the workflow" sap:VirtualizedContainerService.HintSize="387.2,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[ReviewComments]" />
+              </Sequence>
+            </If.Then>
+            <If.Else>
+              <Sequence DisplayName="Rejection Task Sequence" sap:VirtualizedContainerService.HintSize="449.6,636" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:Comment sap:VirtualizedContainerService.HintSize="387.2,421.6" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// The activities that are supposed to happen once the task item is REJECTED should come in this section. This could be:&#xA;&#xA;1. Assigning the details of the task item to another queue so that Approval process flow can be handled through another workflow process&#xA;&#xA;2. Adding data to a excel file so that another process can take over&#xA;&#xA;Ideally, what should happen after approval or rejection should be handled through another process. &#xA;&#xA;Note: For the other process to know what was the approval result, pass on the TaskAction along with rest of the data which can be derived from TaskData variable" />
+                <WriteLine DisplayName="Write ReviewComments value after resuming the workflow" sap:VirtualizedContainerService.HintSize="387.2,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[ReviewComments]" />
+              </Sequence>
+            </If.Else>
+          </If>
+        </Sequence>
+      </ActivityAction>
+    </ParallelForEach>
+  </Sequence>
+</Activity>

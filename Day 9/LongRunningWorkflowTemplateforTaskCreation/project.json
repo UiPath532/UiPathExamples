@@ -1,0 +1,61 @@
+{
+  "name": "LongRunningWorkflowTemplateforTaskCreation",
+  "projectId": "44359e06-5b02-45d5-8fb2-ca45e54507d3",
+  "description": "Provides a template workflow which extracts transaction data from a queue and create tasks. Once the tasks are completed, it performs another set of activities depending on approval and rejection done by user",
+  "main": "WaitForTasksCompletionInLoop.xaml",
+  "dependencies": {
+    "UiPath.FormActivityLibrary": "[2.0.7]",
+    "UiPath.Persistence.Activities": "[1.5.5]",
+    "UiPath.System.Activities": "[24.5.0-preview]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "23.10.6.0",
+  "projectVersion": "1.0.1",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": false,
+    "supportsPersistence": true,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": false,
+    "saveToCloud": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "WaitForTasksCompletionInLoop.xaml",
+      "uniqueId": "b72c3e35-7f23-4815-90f7-2c7a90a57e0a",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Legacy"
+}
