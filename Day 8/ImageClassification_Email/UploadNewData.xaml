@@ -1,0 +1,168 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="UploadNewData" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:um="clr-namespace:UiPath.MLServices;assembly=UiPath.MLServices" xmlns:uma="clr-namespace:UiPath.MLServices.Activities;assembly=UiPath.MLServices.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Classification" Type="InArgument(x:String)" />
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="in_FilePath" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>390,390.333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>UploadNewData_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.MLServices</x:String>
+      <x:String>UiPath.MLServices.Enums</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.MLServices.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Callout.Activity</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Form.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MLServices</AssemblyReference>
+      <AssemblyReference>UiPath.MLServices.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Persistence.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="UploadNewData" sap:VirtualizedContainerService.HintSize="392,365.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uma:MLStorageUpload ApiKey="{x:Null}" Body="{x:Null}" ContinueOnError="{x:Null}" DatasetPublicUrl="{x:Null}" FileName="{x:Null}" FileNameInStorage="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" RuntimeDataset="{x:Null}" RuntimeProject="{x:Null}" SelectedDataset="{x:Reference __ReferenceID0}" SelectedProject="{x:Reference __ReferenceID1}" StatusCode="{x:Null}" Connection="Robot" DisplayName="Upload File" FilePath="[in_FilePath]" sap:VirtualizedContainerService.HintSize="350,273.333333333333" sap2010:WorkflowViewState.IdRef="MLStorageUpload_1" RefreshDataset="False" RefreshProject="False" StoragePath="[&quot;images/&quot;+in_Classification.ToLower]">
+      <uma:MLStorageUpload.Datasets>
+        <um:PageData x:TypeArguments="um:Dataset" PageNum="1" PageSize="50" TotalCount="6">
+          <um:PageData.DataList>
+            <scg:List x:TypeArguments="um:Dataset" Capacity="8">
+              <um:Dataset Id="483f4274-2dc9-4ba0-9419-6992f9a73a25" Name="Car_Train" ProjectId="6002e5b4-46fc-44a3-8edb-507e89f491ec" />
+              <um:Dataset Id="727194ec-b73f-4c67-95ba-ed2efc5f74c6" Name="Train_Car" ProjectId="6002e5b4-46fc-44a3-8edb-507e89f491ec" />
+              <um:Dataset Id="9c726b37-27f5-4f5d-9c0a-13ca36cbcb62" Name="Training" ProjectId="6002e5b4-46fc-44a3-8edb-507e89f491ec" />
+              <um:Dataset Id="45a7daf0-cb67-49bf-99e4-9c60a7b60a5f" Name="Training_3" ProjectId="6002e5b4-46fc-44a3-8edb-507e89f491ec" />
+              <um:Dataset Id="5e876e13-7e19-4805-b127-4e1980f6da13" Name="Training_4withDentedSet" ProjectId="6002e5b4-46fc-44a3-8edb-507e89f491ec" />
+              <um:Dataset x:Name="__ReferenceID0" Id="52bb8891-38fd-4a2f-8784-fdfefe7efc92" Name="Training_New" ProjectId="6002e5b4-46fc-44a3-8edb-507e89f491ec" />
+            </scg:List>
+          </um:PageData.DataList>
+        </um:PageData>
+      </uma:MLStorageUpload.Datasets>
+      <uma:MLStorageUpload.Projects>
+        <um:PageData x:TypeArguments="um:Project" PageNum="1" PageSize="50" TotalCount="65">
+          <um:PageData.DataList>
+            <scg:List x:TypeArguments="um:Project" Capacity="64">
+              <um:Project Id="57ef3793-4ffe-44cd-bd13-a798a428d283" Name="addyTest" />
+              <um:Project Id="c456ef02-e811-4b0b-b29e-39b937764688" Name="aiflevi" />
+              <um:Project Id="9564bce9-2188-456e-aa77-b73835002f33" Name="AncaTest" />
+              <um:Project Id="54b513e3-b7a0-4d1a-9229-4ebb9fbe5b2b" Name="b" />
+              <um:Project Id="9ef6ef34-50e4-4d1f-9909-3200d614d847" Name="Bella_test" />
+              <um:Project Id="406200c5-1866-4c30-8837-9409c652b4ee" Name="BERT Text Classification" />
+              <um:Project Id="0ade0fd7-085a-44c9-9664-189ea910bb1c" Name="BOW Text Classification" />
+              <um:Project Id="77f04adc-59d6-4af4-9e5a-adf902aca403" Name="bugDetails" />
+              <um:Project Id="84631137-fe52-4798-bb06-4a9f7d14e456" Name="cabuz_test" />
+              <um:Project Id="cd636e6b-4e87-4da5-ad96-9ff34bf30dfe" Name="CapitalGroup" />
+              <um:Project Id="e977f916-4078-432a-9c37-eaa33c4b688e" Name="Cenveo" />
+              <um:Project Id="2ea9c588-e860-464d-a4e6-242480d2552c" Name="condaTest" />
+              <um:Project Id="196b6271-e854-43f5-b1e7-3adcafcc28d4" Name="ConsumerComplaints Project" />
+              <um:Project Id="e91ba891-ee67-4cde-8343-cfa8ad827e0c" Name="DanielMelfaANZ" />
+              <um:Project Id="83cfe875-cbe7-45a1-a904-437af9bc8177" Name="DevCon" />
+              <um:Project Id="d8e3129e-a68c-4a70-abfc-ff6630b0090a" Name="document_splitter" />
+              <um:Project Id="c417229b-ed46-4d4a-9d54-fe5a75ac4d35" Name="document_text_classifier" />
+              <um:Project Id="7c843bed-5315-479f-bc5f-53b8bec04f67" Name="Email Classifier" />
+              <um:Project Id="7644d273-7a0b-47e2-8a13-d93aa3fdc70b" Name="EmployeeOnboarding" />
+              <um:Project Id="f0fb6aed-6568-4fbb-9db9-a0b93ae98fdb" Name="flevi" />
+              <um:Project Id="5fd744f3-d94c-4456-b5f3-df3bc19e3261" Name="Florin" />
+              <um:Project Id="2bcffcad-c676-4982-a9ba-be5f40d81c59" Name="HP_Test" />
+              <um:Project Id="bb9e8227-f56f-4cca-a5c6-dd57c46c6f37" Name="HP_Test_Paul" />
+              <um:Project Id="e4a764db-0f2f-4409-a359-fc40a2478303" Name="Image Classifier" />
+              <um:Project Id="f2babceb-2c69-49e5-973c-ede0b3db6945" Name="Image Classifier V2" />
+              <um:Project Id="35c57b5a-53b4-43e5-96f7-11225fdc56d0" Name="ImageClassification" />
+              <um:Project x:Name="__ReferenceID1" Id="6002e5b4-46fc-44a3-8edb-507e89f491ec" Name="ImageClassification_NM" />
+              <um:Project Id="f3391e55-1f5b-4ef8-bcc1-6c56966edea8" Name="jeremyTestDataset" />
+              <um:Project Id="fa2f4464-380c-4bec-a933-7903a05404a6" Name="KP_test" />
+              <um:Project Id="51df1539-1c15-4379-bcef-d00a0f191833" Name="mariuspaval" />
+              <um:Project Id="809774e2-d67d-40ff-bc66-1ea9736eaef5" Name="Mircea" />
+              <um:Project Id="b6495209-a938-43d6-8ecb-7584364663b4" Name="ML_Document_Classification" />
+              <um:Project Id="e5321bae-7878-47bf-ba3f-d587fe4788b2" Name="Moneygram" />
+              <um:Project Id="0a7309f9-c602-41be-83ed-bf3d1be66413" Name="Moni_DM_Testing" />
+              <um:Project Id="fd92cc90-55d0-4ce0-90f7-5f944db8a692" Name="Mounika_21_10" />
+              <um:Project Id="10e6e4df-d4c3-4c21-8421-83c2f131a111" Name="Multilabel Text classification" />
+              <um:Project Id="21cd9cbc-79b6-48c4-b3ac-1aefb7d0535d" Name="Multilingual Text Classification" />
+              <um:Project Id="c61ed6b9-e967-4cc2-90f1-dab9871be0a7" Name="NarenTest" />
+              <um:Project Id="3d0a02ba-e8fd-49a2-91df-b04740f02e61" Name="NER" />
+              <um:Project Id="3dedf082-e94b-455f-8796-4ee7a4f1508a" Name="NER OOB" />
+              <um:Project Id="dd7f1d07-59ed-4ca0-8990-53eb58362801" Name="News" />
+              <um:Project Id="1b7cc6c7-5969-4a65-a358-9dd7575ee204" Name="ONE_Spec_Discovery_Project" />
+              <um:Project Id="7c75e6c3-c96a-4d4b-b96d-806ce067c8d8" Name="Paul P Test" />
+              <um:Project Id="b18d107a-2177-49fa-a7ba-040f576be293" Name="PaulC_Test" />
+              <um:Project Id="6847f0d2-0c9e-4483-9294-b36cba1eda73" Name="POC Anti money laundering" />
+              <um:Project Id="6508782f-7007-4775-969f-b51a12b1cecc" Name="proj2" />
+              <um:Project Id="c97107a1-69d3-42ea-9fd7-d2d0939c8568" Name="RC Univariate Timeseries Model" />
+              <um:Project Id="a5dad7d1-8ed6-40cc-90f4-318268f46242" Name="Semantic Search" />
+              <um:Project Id="71a0c972-037a-4bf9-8100-bd1d5345ceee" Name="semantic_similarity" />
+              <um:Project Id="255c7080-b6f1-463b-a509-880751139b60" Name="SentAnalysisAG" />
+            </scg:List>
+          </um:PageData.DataList>
+        </um:PageData>
+      </uma:MLStorageUpload.Projects>
+    </uma:MLStorageUpload>
+  </Sequence>
+</Activity>

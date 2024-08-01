@@ -1,0 +1,367 @@
+
+Status   Name               DisplayName
+------   ----               -----------
+Stopped                     Agent Activation Runtime_8bd33e8
+Stopped                     Agent Activation Runtime_8d55a7b
+Stopped                     AllJoyn Router Service
+Stopped                     Application Layer Gateway Service
+Stopped                     AMD Crash Defender Service
+Stopped                     Application Identity
+Stopped                     AppProtection Service
+Stopped                     App Readiness
+Stopped                     ASUS Update Service (asus)
+Stopped                     ASUS Update Service (asusm)
+Stopped                     Cellular Time
+Stopped                     ActiveX Installer (AxInstSV)
+Stopped                     GameDVR and Broadcast User Service_8b…
+Stopped                     GameDVR and Broadcast User Service_8d…
+Stopped                     BitLocker Drive Encryption Service
+Stopped                     Bluetooth User Support Service_8bd33e8
+Stopped                     Bluetooth User Support Service_8d55a7b
+Stopped                     Bluetooth Audio Gateway Service
+Stopped                     AVCTP service
+Stopped                     CaptureService_8bd33e8
+Stopped                     CaptureService_8d55a7b
+Stopped                     Client License Service (ClipSVC)
+Stopped                     Cloud Backup and Restore Service_8bd3…
+Stopped                     Cloud Backup and Restore Service_8d55…
+Stopped                     COM+ System Application
+Stopped                     ConsentUX User Service_8bd33e8
+Stopped                     ConsentUX User Service_8d55a7b
+Stopped                     CredentialEnrollmentManagerUserSvc_8b…
+Stopped                     CredentialEnrollmentManagerUserSvc_8d…
+Stopped                     Citrix Policy Service
+Stopped                     Citrix App Data Protection Service
+Stopped                     Declared Configuration(DC) service
+Stopped                     Optimize drives
+Stopped                     DeviceAssociationBroker_8bd33e8
+Stopped                     DeviceAssociationBroker_8d55a7b
+Stopped                     DevicePicker_8bd33e8
+Stopped                     DevicePicker_8d55a7b
+Stopped                     DevicesFlow_8bd33e8
+Stopped                     DevicesFlow_8d55a7b
+Stopped                     Microsoft (R) Diagnostics Hub Standar…
+Stopped                     Diagnostic Execution Service
+Stopped                     Device Management Enrollment Service
+Stopped                     Device Management Wireless Applicatio…
+Stopped                     Wired AutoConfig
+Stopped                     Device Setup Manager
+Stopped                     Extensible Authentication Protocol
+Stopped                     Microsoft Edge Update Service (edgeup…
+Stopped                     Microsoft Edge Update Service (edgeup…
+Stopped                     Encrypting File System (EFS)
+Stopped                     Embedded Mode
+Stopped                     Enterprise App Management Service
+Stopped                     Fax
+Stopped                     File History Service
+Stopped                     Windows Presentation Foundation Font …
+Stopped                     Windows Camera Frame Server
+Stopped                     Windows Camera Frame Server Monitor
+Stopped                     GameInput Service
+Stopped                     GameInput Service
+Stopped                     Google Chrome Elevation Service (Goog…
+Stopped                     GoogleUpdater InternalService 128.0.6…
+Stopped                     GoogleUpdater Service 128.0.6597.0 (G…
+Stopped                     GraphicsPerfSvc
+Stopped                     HP LaserJet Service
+Stopped                     HV Host Service
+Stopped                     Windows Mobile Hotspot Service
+Stopped                     IKE and AuthIP IPsec Keying Modules
+Stopped                     IP Translation Configuration Service
+Stopped                     KtmRm for Distributed Transaction Coo…
+Stopped                     Link-Layer Topology Discovery Mapper
+Stopped                     Language Experience Service
+Stopped                     Downloaded Maps Manager
+Stopped                     McpManagementService
+Stopped                     MessagingService_8bd33e8
+Stopped                     MessagingService_8d55a7b
+Stopped                     Microsoft Edge Elevation Service (Mic…
+Stopped                     Windows Mixed Reality OpenXR Service
+Stopped                     Distributed Transaction Coordinator
+Stopped                     Microsoft iSCSI Initiator Service
+Stopped                     Windows Installer
+Stopped                     Natural Authentication
+Stopped                     Network Connectivity Assistant
+Stopped                     Netlogon
+Stopped                     Network Connections
+Stopped                     Network Setup Service
+Stopped                     Net.Tcp Port Sharing Service
+Stopped                     Microsoft Passport Container
+Stopped                     Microsoft Passport
+Stopped                     Network Location Awareness
+Stopped                     NVIDIA LocalSystem Container
+Stopped                     Office 64 Source Engine
+Stopped                     Peer Networking Identity Manager
+Stopped                     Peer Networking Grouping
+Stopped                     P9RdrService_8bd33e8
+Stopped                     P9RdrService_8d55a7b
+Stopped                     PenService_8bd33e8
+Stopped                     PenService_8d55a7b
+Stopped                     Windows Perception Simulation Service
+Stopped                     Performance Counter DLL Host
+Stopped                     Phone Service
+Stopped                     Contact Data_8bd33e8
+Stopped                     Performance Logs & Alerts
+Stopped                     PNRP Machine Name Publication Service
+Stopped                     Peer Name Resolution Protocol
+Stopped                     Printer Extensions and Notifications
+Stopped                     PrintWorkflow_8bd33e8
+Stopped                     Windows PushToInstall Service
+Stopped                     Quality Windows Audio Video Experience
+Stopped                     Remote Access Auto Connection Manager
+Stopped                     RefreshRateService
+Stopped                     Routing and Remote Access
+Stopped                     Remote Registry
+Stopped                     Retail Demo Service
+Stopped                     Remote Procedure Call (RPC) Locator
+Stopped                     Smart Card
+Stopped                     Smart Card Device Enumeration Service
+Stopped                     Smart Card Removal Policy
+Stopped                     Windows Backup
+Stopped                     Payments and NFC/SE Manager
+Stopped                     Sensor Data Service
+Stopped                     Sensor Service
+Stopped                     Sensor Monitoring Service
+Stopped                     System Guard Runtime Monitor Broker
+Stopped                     Internet Connection Sharing (ICS)
+Stopped                     Spatial Data Service
+Stopped                     Shared PC Account Manager
+Stopped                     Microsoft Storage Spaces SMP
+Stopped                     Microsoft Windows SMS Router Service.
+Stopped                     SNMP Trap
+Stopped                     Windows Perception Service
+Stopped                     SQL Server Agent (SQLEXPRESS)
+Stopped                     SQL Server Browser
+Stopped                     OpenSSH Authentication Agent
+Stopped                     Windows Image Acquisition (WIA)
+Stopped                     Spot Verifier
+Stopped                     Microsoft Software Shadow Copy Provid…
+Stopped                     Telephony
+Stopped                     Storage Tiers Management
+Stopped                     Recommended Troubleshooting Service
+Stopped                     Windows Modules Installer
+Stopped                     Auto Time Zone Updater
+Stopped                     Microsoft Update Health Service
+Stopped                     User Data Storage_8bd33e8
+Stopped                     UPnP Device Host
+Stopped                     User Data Access_8bd33e8
+Stopped                     Volumetric Audio Compositor Service
+Stopped                     VirtualBox system service
+Stopped                     Virtual Disk
+Stopped                     Hyper-V Guest Service Interface
+Stopped                     Hyper-V Heartbeat Service
+Stopped                     Hyper-V Data Exchange Service
+Stopped                     Hyper-V Remote Desktop Virtualization…
+Stopped                     Hyper-V Guest Shutdown Service
+Stopped                     Hyper-V Time Synchronization Service
+Stopped                     Hyper-V PowerShell Direct Service
+Stopped                     Hyper-V Volume Shadow Copy Requestor
+Stopped                     Volume Shadow Copy
+Stopped                     WaaSMedicSvc
+Stopped                     WalletService
+Stopped                     Warp JIT Service
+Stopped                     Block Level Backup Engine Service
+Stopped                     Windows Biometric Service
+Stopped                     Windows Connect Now - Config Registrar
+Stopped                     Diagnostic Service Host
+Stopped                     Windows Event Collector
+Stopped                     Windows Encryption Provider Host Serv…
+Stopped                     Problem Reports Control Panel Support
+Stopped                     Windows Error Reporting Service
+Stopped                     Wi-Fi Direct Services Connection Mana…
+Stopped                     Still Image Acquisition Events
+Stopped                     Windows Remote Management (WS-Managem…
+Stopped                     Windows Insider Service
+Stopped                     Microsoft Account Sign-in Assistant
+Stopped                     Local Profile Assistant Service
+Stopped                     Windows Management Service
+Stopped                     Windows Media Player Network Sharing …
+Stopped                     Work Folders
+Stopped                     Parental Controls
+Stopped                     Portable Device Enumerator Service
+Stopped                     Windows Update
+Stopped                     WWAN AutoConfig
+Stopped                     Xbox Live Game Save
+Stopped                     Xbox Accessory Management Service
+Stopped                     Xbox Live Networking Service
+
+
+Status   Name               DisplayName
+------   ----               -----------
+Stopped                     Agent Activation Runtime_8bd33e8
+Stopped                     Agent Activation Runtime_8d55a7b
+Stopped                     AllJoyn Router Service
+Stopped                     Application Layer Gateway Service
+Stopped                     AMD Crash Defender Service
+Stopped                     Application Identity
+Stopped                     AppProtection Service
+Stopped                     App Readiness
+Stopped                     ASUS Update Service (asus)
+Stopped                     ASUS Update Service (asusm)
+Stopped                     Cellular Time
+Stopped                     ActiveX Installer (AxInstSV)
+Stopped                     GameDVR and Broadcast User Service_8b…
+Stopped                     GameDVR and Broadcast User Service_8d…
+Stopped                     BitLocker Drive Encryption Service
+Stopped                     Bluetooth User Support Service_8bd33e8
+Stopped                     Bluetooth User Support Service_8d55a7b
+Stopped                     Bluetooth Audio Gateway Service
+Stopped                     AVCTP service
+Stopped                     CaptureService_8bd33e8
+Stopped                     CaptureService_8d55a7b
+Stopped                     Client License Service (ClipSVC)
+Stopped                     Cloud Backup and Restore Service_8bd3…
+Stopped                     Cloud Backup and Restore Service_8d55…
+Stopped                     COM+ System Application
+Stopped                     ConsentUX User Service_8bd33e8
+Stopped                     ConsentUX User Service_8d55a7b
+Stopped                     CredentialEnrollmentManagerUserSvc_8b…
+Stopped                     CredentialEnrollmentManagerUserSvc_8d…
+Stopped                     Citrix Policy Service
+Stopped                     Citrix App Data Protection Service
+Stopped                     Declared Configuration(DC) service
+Stopped                     Optimize drives
+Stopped                     DeviceAssociationBroker_8bd33e8
+Stopped                     DeviceAssociationBroker_8d55a7b
+Stopped                     DevicePicker_8bd33e8
+Stopped                     DevicePicker_8d55a7b
+Stopped                     Microsoft (R) Diagnostics Hub Standar…
+Stopped                     Diagnostic Execution Service
+Stopped                     Device Management Enrollment Service
+Stopped                     Device Management Wireless Applicatio…
+Stopped                     Wired AutoConfig
+Stopped                     Device Setup Manager
+Stopped                     Extensible Authentication Protocol
+Stopped                     Microsoft Edge Update Service (edgeup…
+Stopped                     Microsoft Edge Update Service (edgeup…
+Stopped                     Embedded Mode
+Stopped                     Enterprise App Management Service
+Stopped                     Fax
+Stopped                     File History Service
+Stopped                     Windows Presentation Foundation Font …
+Stopped                     Windows Camera Frame Server
+Stopped                     Windows Camera Frame Server Monitor
+Stopped                     GameInput Service
+Stopped                     GameInput Service
+Stopped                     Google Chrome Elevation Service (Goog…
+Stopped                     GoogleUpdater InternalService 128.0.6…
+Stopped                     GoogleUpdater Service 128.0.6597.0 (G…
+Stopped                     GraphicsPerfSvc
+Stopped                     HP LaserJet Service
+Stopped                     HV Host Service
+Stopped                     Windows Mobile Hotspot Service
+Stopped                     IKE and AuthIP IPsec Keying Modules
+Stopped                     IP Translation Configuration Service
+Stopped                     KtmRm for Distributed Transaction Coo…
+Stopped                     Link-Layer Topology Discovery Mapper
+Stopped                     Language Experience Service
+Stopped                     Downloaded Maps Manager
+Stopped                     McpManagementService
+Stopped                     MessagingService_8bd33e8
+Stopped                     MessagingService_8d55a7b
+Stopped                     Microsoft Edge Elevation Service (Mic…
+Stopped                     Windows Mixed Reality OpenXR Service
+Stopped                     Distributed Transaction Coordinator
+Stopped                     Microsoft iSCSI Initiator Service
+Stopped                     Windows Installer
+Stopped                     Natural Authentication
+Stopped                     Network Connectivity Assistant
+Stopped                     Netlogon
+Stopped                     Network Connections
+Stopped                     Network Setup Service
+Stopped                     Net.Tcp Port Sharing Service
+Stopped                     Network Location Awareness
+Stopped                     NVIDIA LocalSystem Container
+Stopped                     Office 64 Source Engine
+Stopped                     Peer Networking Identity Manager
+Stopped                     Peer Networking Grouping
+Stopped                     P9RdrService_8bd33e8
+Stopped                     P9RdrService_8d55a7b
+Stopped                     PenService_8bd33e8
+Stopped                     PenService_8d55a7b
+Stopped                     Windows Perception Simulation Service
+Stopped                     Performance Counter DLL Host
+Stopped                     Phone Service
+Stopped                     Contact Data_8bd33e8
+Stopped                     Performance Logs & Alerts
+Stopped                     PNRP Machine Name Publication Service
+Stopped                     Peer Name Resolution Protocol
+Stopped                     Printer Extensions and Notifications
+Stopped                     Windows PushToInstall Service
+Stopped                     Remote Access Auto Connection Manager
+Stopped                     RefreshRateService
+Stopped                     Routing and Remote Access
+Stopped                     Remote Registry
+Stopped                     Retail Demo Service
+Stopped                     Remote Procedure Call (RPC) Locator
+Stopped                     Smart Card
+Stopped                     Smart Card Device Enumeration Service
+Stopped                     Smart Card Removal Policy
+Stopped                     Windows Backup
+Stopped                     Payments and NFC/SE Manager
+Stopped                     Sensor Data Service
+Stopped                     Sensor Service
+Stopped                     Sensor Monitoring Service
+Stopped                     System Guard Runtime Monitor Broker
+Stopped                     Internet Connection Sharing (ICS)
+Stopped                     Spatial Data Service
+Stopped                     Shared PC Account Manager
+Stopped                     Microsoft Storage Spaces SMP
+Stopped                     Microsoft Windows SMS Router Service.
+Stopped                     SNMP Trap
+Stopped                     Windows Perception Service
+Stopped                     SQL Server Agent (SQLEXPRESS)
+Stopped                     SQL Server Browser
+Stopped                     OpenSSH Authentication Agent
+Stopped                     Windows Image Acquisition (WIA)
+Stopped                     Spot Verifier
+Stopped                     Microsoft Software Shadow Copy Provid…
+Stopped                     Telephony
+Stopped                     Storage Tiers Management
+Stopped                     Recommended Troubleshooting Service
+Stopped                     Windows Modules Installer
+Stopped                     Auto Time Zone Updater
+Stopped                     Microsoft Update Health Service
+Stopped                     User Data Storage_8bd33e8
+Stopped                     UPnP Device Host
+Stopped                     User Data Access_8bd33e8
+Stopped                     Volumetric Audio Compositor Service
+Stopped                     VirtualBox system service
+Stopped                     Virtual Disk
+Stopped                     Hyper-V Guest Service Interface
+Stopped                     Hyper-V Heartbeat Service
+Stopped                     Hyper-V Data Exchange Service
+Stopped                     Hyper-V Remote Desktop Virtualization…
+Stopped                     Hyper-V Guest Shutdown Service
+Stopped                     Hyper-V Time Synchronization Service
+Stopped                     Hyper-V PowerShell Direct Service
+Stopped                     Hyper-V Volume Shadow Copy Requestor
+Stopped                     Volume Shadow Copy
+Stopped                     Windows Time
+Stopped                     WaaSMedicSvc
+Stopped                     WalletService
+Stopped                     Warp JIT Service
+Stopped                     Block Level Backup Engine Service
+Stopped                     Windows Biometric Service
+Stopped                     Windows Connect Now - Config Registrar
+Stopped                     Diagnostic Service Host
+Stopped                     Windows Event Collector
+Stopped                     Windows Encryption Provider Host Serv…
+Stopped                     Problem Reports Control Panel Support
+Stopped                     Windows Error Reporting Service
+Stopped                     Wi-Fi Direct Services Connection Mana…
+Stopped                     Still Image Acquisition Events
+Stopped                     Windows Remote Management (WS-Managem…
+Stopped                     Windows Insider Service
+Stopped                     Local Profile Assistant Service
+Stopped                     Windows Management Service
+Stopped                     Windows Media Player Network Sharing …
+Stopped                     Work Folders
+Stopped                     Parental Controls
+Stopped                     Portable Device Enumerator Service
+Stopped                     Windows Update
+Stopped                     WWAN AutoConfig
+Stopped                     Xbox Live Game Save
+Stopped                     Xbox Accessory Management Service
+Stopped                     Xbox Live Networking Service
+

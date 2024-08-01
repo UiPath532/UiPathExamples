@@ -1,0 +1,25 @@
+﻿Email 1 sent on 29/07/2024 08:00:20
+Subject: 1 New Errors - DefaultTenant
+From: UiPath
+Has Attachments: No
+----------------------------------------------------------------------------------
+Email 2 sent on 28/07/2024 10:41:11
+Subject: FW  forward
+From: Me
+Has Attachments: No
+----------------------------------------------------------------------------------
+Email 3 sent on 28/07/2024 10:40:47
+Subject: Download Attachment
+From: Me
+Has Attachments: Yes
+----------------------------------------------------------------------------------
+Email 4 sent on 28/07/2024 10:39:46
+Subject: Save
+From: Me
+Has Attachments: No
+----------------------------------------------------------------------------------
+Email 5 sent on 28/07/2024 10:39:34
+Subject: Read 
+From: Me
+Has Attachments: No
+----------------------------------------------------------------------------------

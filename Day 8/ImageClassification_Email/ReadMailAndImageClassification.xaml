@@ -1,0 +1,313 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ReadMailAndImageClassification" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System" xmlns:ucas="clr-namespace:UiPath.Core.Activities.Storage;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.MLServices;assembly=UiPath.MLServices" xmlns:uma="clr-namespace:UiPath.MLServices.Activities;assembly=UiPath.MLServices.Activities" xmlns:upaf="clr-namespace:UiPath.Persistence.Activities.FormTask;assembly=UiPath.Persistence.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="out_TaskList" Type="OutArgument(scg:List(upaf:FormTaskData))" />
+    <x:Property Name="out_TaskCreated" Type="OutArgument(x:Boolean)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>1148,3016</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="41">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.MLServices</x:String>
+      <x:String>UiPath.MLServices.Enums</x:String>
+      <x:String>UiPath.MLServices.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Persistence.Activities.Model.Task</x:String>
+      <x:String>UiPath.Persistence.Activities.FormTask</x:String>
+      <x:String>UiPath.Persistence.Activities.BaseTask</x:String>
+      <x:String>UiPath.Persistence.Activities</x:String>
+      <x:String>UiPath.Core.Activities.Storage</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>UiPath.Core</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="78">
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Callout.Activity</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Form.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.MLServices</AssemblyReference>
+      <AssemblyReference>UiPath.MLServices.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Persistence.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Read Mail &amp; Image Classification" sap:VirtualizedContainerService.HintSize="1158,2991" sap2010:WorkflowViewState.IdRef="Sequence_15">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="MailMessage" />
+      <Variable x:TypeArguments="scg:IEnumerable(x:String)" Name="Attachments" />
+      <Variable x:TypeArguments="x:String" Name="jsonResp" />
+      <Variable x:TypeArguments="njl:JObject" Name="jobj" />
+      <Variable x:TypeArguments="njl:JObject" Name="ResponseOutput" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Assign sap:VirtualizedContainerService.HintSize="1116,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+      <Assign.To>
+        <OutArgument x:TypeArguments="scg:List(upaf:FormTaskData)">[out_TaskList]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="scg:List(upaf:FormTaskData)">[new List(of UiPath.Persistence.Activities.FormTask.FormTaskData)()]</InArgument>
+      </Assign.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Assign>
+    <ui:GetOutlookMailMessages Filter="{x:Null}" FilterByMessageIds="{x:Null}" TimeoutMS="{x:Null}" Account="[in_Config(&quot;outlookAccount&quot;).ToString]" sap2010:Annotation.AnnotationText="Reading mail from specific Folder" DisplayName="Get Outlook Mail Messages" GetAttachements="False" sap:VirtualizedContainerService.HintSize="1116,64" sap2010:WorkflowViewState.IdRef="GetOutlookMailMessages_1" MailFolder="[in_Config(&quot;MailFolder&quot;).ToString]" MarkAsRead="False" Messages="[MailMessage]" OnlyUnreadMessages="False" OrderByDate="OldestFirst" Top="30">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:GetOutlookMailMessages>
+    <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1116,2695" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[MailMessage]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="snm:MailMessage">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="msg" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1080,2571" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="MessageId" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="1038,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[MessageId]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[msg.Headers("Message-ID").ToString]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:SaveMailAttachments sap2010:Annotation.AnnotationText="Saving Attachments" Attachments="[Attachments]" DisplayName="Save Attachments" FolderPath="images" sap:VirtualizedContainerService.HintSize="1038,118" sap2010:WorkflowViewState.IdRef="SaveMailAttachments_1" Message="[msg]" OverwriteExisting="False">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:SaveMailAttachments>
+            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1038,2221" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[Attachments]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="x:String">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:String" Name="item1" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1002,2097" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uma:MLSkills ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Name="{x:Null}" NumberOfRetries="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SelectedMLSkill="{x:Reference __ReferenceID0}" StatusCode="{x:Null}" TimeOutMs="{x:Null}" sap2010:Annotation.AnnotationText="ML Skill will read the attachment and classify them accordingly" ApiKey="[in_Config(&quot;ApiKey&quot;).ToString]" Connection="Endpoint" DisplayName="MLSkill" ExternApiFileType="File" sap:VirtualizedContainerService.HintSize="960,433" sap2010:WorkflowViewState.IdRef="MLSkills_2" Item="[item1]" JsonResponse="[jsonResp]" NextPageNum="2" RefreshList="False" SkillURL="[in_Config(&quot;EndpointUrl&quot;).ToString]" TotalCount="7">
+                      <uma:MLSkills.MLSkillList>
+                        <scg:List x:TypeArguments="um:MLSkill" Capacity="8">
+                          <um:MLSkill AccessUri="https://ai-stg-uipath.deskover.com/mlskills/e036e5ba-67e6-412d-977f-cbd6d8a4008d/5444607b-3595-4d07-ac65-1bfffedffa59/document-splitter-2" AccountId="e036e5ba-67e6-412d-977f-cbd6d8a4008d" Description="" Id="b7e723e3-8e7e-4773-b830-dbfbb8cc4b66" InputDescription="" InputType="JSON" Name="document_splitter_2" OutputDescription="" ProjectId="d8e3129e-a68c-4a70-abfc-ff6630b0090a" TenantId="5444607b-3595-4d07-ac65-1bfffedffa59" />
+                          <um:MLSkill AccessUri="https://ai-stg-uipath.deskover.com/mlskills/e036e5ba-67e6-412d-977f-cbd6d8a4008d/5444607b-3595-4d07-ac65-1bfffedffa59/imageclassification-v4" AccountId="e036e5ba-67e6-412d-977f-cbd6d8a4008d" Description="" Id="183ff5e1-e9d5-463a-aa3e-d865da43433b" InputDescription="Full path of the image file on which you want to classify.&#xA;Make sure that the image format is either JPEG or PNG." InputType="FILE" Name="imageClassification_v4" OutputDescription="JSON with identified label for the image and confidence score (between 0-1)." ProjectId="6002e5b4-46fc-44a3-8edb-507e89f491ec" TenantId="5444607b-3595-4d07-ac65-1bfffedffa59" />
+                          <um:MLSkill x:Name="__ReferenceID0" AccessUri="https://ai-stg-uipath.deskover.com/mlskills/e036e5ba-67e6-412d-977f-cbd6d8a4008d/5444607b-3595-4d07-ac65-1bfffedffa59/imageclassificationml" AccountId="e036e5ba-67e6-412d-977f-cbd6d8a4008d" Description="ML Skill for Image Classification" Id="f6dcbe5c-fddd-44b6-bdff-f5fe8d0694cc" InputDescription="Full path of the image file on which you want to classify.&#xA;Make sure that the image format is either JPEG or PNG." InputType="FILE" Name="ImageClassificationML" OutputDescription="JSON with identified label for the image and confidence score (between 0-1)." ProjectId="22b30365-20b6-4ff6-a079-a619c91d140c" TenantId="5444607b-3595-4d07-ac65-1bfffedffa59" />
+                          <um:MLSkill AccessUri="https://ai-stg-uipath.deskover.com/mlskills/e036e5ba-67e6-412d-977f-cbd6d8a4008d/5444607b-3595-4d07-ac65-1bfffedffa59/semanticsimilarity-v2" AccountId="e036e5ba-67e6-412d-977f-cbd6d8a4008d" Description="" Id="9cd969e6-5539-4c8e-bab5-f92734952ac9" InputDescription="Sentences (or short texts) to be compared. For each text, lengths beyond 300 characters will be ignored. For example:&#xA;&quot;[&quot;The boy likes to read&quot;, &quot;The child enjoys books&quot;]&quot;. &#xA;&#xA;Compare this example with another example where one might not expect a high semantic similarity score: &#xA; &quot;[&quot;The boy likes to read&quot;, &quot;The child enjoys playing sports&quot;]&quot;" InputType="JSON" Name="semanticSimilarity_v2" OutputDescription="A number between 0 (little to no semantic similarity) and 5 (high semantic similarity). In the two previous examples the scores are:&#xA;&#xA;&quot;4.09&quot; and &quot;0.98&quot; respectively." ProjectId="5622d645-3e58-45d4-90bc-d0958aca45cd" TenantId="5444607b-3595-4d07-ac65-1bfffedffa59" />
+                          <um:MLSkill AccessUri="https://ai-stg-uipath.deskover.com/mlskills/e036e5ba-67e6-412d-977f-cbd6d8a4008d/5444607b-3595-4d07-ac65-1bfffedffa59/sentimentanalysis" AccountId="e036e5ba-67e6-412d-977f-cbd6d8a4008d" Description="" Id="9d195501-abee-4a65-9773-6e18cefc3258" InputDescription="Text to be analyzed. For example: &quot;I am dissatisfied with this service.&quot;" InputType="JSON" Name="SentimentAnalysis" OutputDescription="JSON with class name and confidence on that class prediction (between 0-1).&#xA;Class prediction can be one of: &quot;Very Negative&quot;, &quot;Negative&quot;, &quot;Neutral&quot;, &quot;Positive&quot;, &quot;Very Positive&quot;&#xA;For example:  '{&quot;sentiment&quot;: &quot;Very Negative&quot;, &quot;confidence&quot;: 0.97}'" ProjectId="5622d645-3e58-45d4-90bc-d0958aca45cd" TenantId="5444607b-3595-4d07-ac65-1bfffedffa59" />
+                          <um:MLSkill AccessUri="https://ai-stg-uipath.deskover.com/mlskills/e036e5ba-67e6-412d-977f-cbd6d8a4008d/5444607b-3595-4d07-ac65-1bfffedffa59/smartemail-classification-v2" AccountId="e036e5ba-67e6-412d-977f-cbd6d8a4008d" Description="" Id="897ca0df-04e6-434e-9c98-953e3645fa66" InputDescription="Text to be classified as String: 'I loved this movie.'" InputType="JSON" Name="smartEmail_classification_v2" OutputDescription="JSON with pedicted class name, associated confidence on that class prediction (between 0-1).  For example: {\&quot;prediction\&quot;: \&quot;Positive\&quot;, \&quot;confidence\&quot;: 0.9422031841278076,}" ProjectId="5622d645-3e58-45d4-90bc-d0958aca45cd" TenantId="5444607b-3595-4d07-ac65-1bfffedffa59" />
+                          <um:MLSkill AccessUri="https://ai-stg-uipath.deskover.com/mlskills/e036e5ba-67e6-412d-977f-cbd6d8a4008d/5444607b-3595-4d07-ac65-1bfffedffa59/smartemail-ner" AccountId="e036e5ba-67e6-412d-977f-cbd6d8a4008d" Description="" Id="9a9ab5de-4dd5-4d3e-b10b-10aeb8056a78" InputDescription="Text in English from which entities will be extracted." InputType="JSON" Name="SmartEmail_NER" OutputDescription="List of named entities in the text. Each elemnt in the list has the text that was recognized, the starting and ending positions (character-wise) of the text, the type of named entity and the confidence in that prediction. For example: [ {&quot;text&quot;: &quot;George Washington&quot;,&quot;start_pos&quot;: 0,&quot;end_pos&quot;: 17,&quot;type&quot;: &quot;PER&quot;,&quot;confidence&quot;: 0.96469810605049133 }, {&quot;text&quot;: &quot;New York City&quot;,&quot;start_pos&quot;: 26,&quot;end_pos&quot;: 39,&quot;type&quot;: &quot;LOC&quot;,&quot;confidence&quot;: 0.944470226764679 }, {&quot;text&quot;: &quot;Congress&quot;,&quot;start_pos&quot;: 51,&quot;end_pos&quot;: 59,&quot;type&quot;: &quot;ORG&quot;,&quot;confidence&quot;: 0.99666249752044678 }]" ProjectId="5622d645-3e58-45d4-90bc-d0958aca45cd" TenantId="5444607b-3595-4d07-ac65-1bfffedffa59" />
+                        </scg:List>
+                      </uma:MLSkills.MLSkillList>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uma:MLSkills>
+                    <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="960,60" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_3" JsonObject="[jobj]" JsonString="[jsonResp]" />
+                    <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="960,60" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_4" JsonObject="[ResponseOutput]" JsonString="[jobj(&quot;response&quot;).ToString]" />
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="960,91" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Attached image is identified as &quot;+ResponseOutput(&quot;label&quot;).ToString+ &quot; with confidence score of &quot;+ResponseOutput(&quot;confidence&quot;).ToString]" />
+                    <If Condition="[CDbl(ResponseOutput(&quot;confidence&quot;))&lt;CDbl(in_Config(&quot;ThresholdConfidence&quot;))]" DisplayName="If - Enough Confidence ??" sap:VirtualizedContainerService.HintSize="960,1201" sap2010:WorkflowViewState.IdRef="If_1">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence DisplayName="Sequence - Action" sap:VirtualizedContainerService.HintSize="376,1043" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="upaf:FormTaskData" Name="TaskObject" />
+                            <Variable x:TypeArguments="x:String" Default="[path.GetFileName(item1)]" Name="imagePath" />
+                            <Variable x:TypeArguments="scg:List(x:String)" Name="OptionList" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ucas:UploadStorageFile TimeoutMS="{x:Null}" Destination="[imagePath]" DisplayName="Upload Image File" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="UploadStorageFile_2" Path="[item1]" StorageBucketName="[in_Config(&quot;StorageBucketName&quot;).ToString]">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ucas:UploadStorageFile>
+                          <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="scg:List(x:String)">[OptionList]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="scg:List(x:String)">[in_config("ClassArray").ToString.Split(","c).ToList]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <AddToCollection x:TypeArguments="x:String" Collection="[OptionList]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_3" Item="Select option from above" />
+                          <upaf:CreateFormTask BucketFolderPath="{x:Null}" ExternalTag="{x:Null}" TaskCatalog="{x:Null}" TimeoutMs="{x:Null}" sap2010:Annotation.AnnotationText="Creating Form Task in Action Center" BucketName="ActionTest" DisplayName="Create Form Task" FormLayout="%[{&quot;label&quot;:&quot;HTML&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;content&quot;:&quot;&lt;div &gt;\n  &lt;img src=\&quot;{{ data.imgPath_storage }}\&quot; /&gt;&lt;br&gt;\n&lt;/div&gt;&quot;,&quot;refreshOnChange&quot;:true,&quot;key&quot;:&quot;html&quot;,&quot;type&quot;:&quot;htmlelement&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false},{&quot;label&quot;:&quot;Pre - defined class&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;class&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;User defined class&quot;,&quot;tableView&quot;:true,&quot;data&quot;:{&quot;values&quot;:[{&quot;label&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}]},&quot;validate&quot;:{&quot;onlyAvailableItems&quot;:false},&quot;key&quot;:&quot;in_ArrayClass&quot;,&quot;type&quot;:&quot;select&quot;,&quot;indexeddb&quot;:{&quot;filter&quot;:{}},&quot;input&quot;:true},{&quot;label&quot;:&quot;MessageId&quot;,&quot;hidden&quot;:true,&quot;hideLabel&quot;:true,&quot;disabled&quot;:true,&quot;tableView&quot;:true,&quot;key&quot;:&quot;messageId&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true},{&quot;mask&quot;:false,&quot;customClass&quot;:&quot;uipath-button-container&quot;,&quot;tableView&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;table&quot;,&quot;input&quot;:false,&quot;key&quot;:&quot;key&quot;,&quot;label&quot;:&quot;label&quot;,&quot;rows&quot;:[[{&quot;components&quot;:[{&quot;label&quot;:&quot;Submit&quot;,&quot;theme&quot;:&quot;success&quot;,&quot;disableOnInvalid&quot;:true,&quot;tableView&quot;:true,&quot;key&quot;:&quot;submit&quot;,&quot;custom&quot;:&quot;instance.emit('executeDoBlock', instance.component);&quot;,&quot;type&quot;:&quot;button&quot;,&quot;input&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;isResetData&quot;:false}]},{&quot;components&quot;:[]},{&quot;components&quot;:[]},{&quot;components&quot;:[]},{&quot;components&quot;:[]},{&quot;components&quot;:[]}]],&quot;numRows&quot;:1,&quot;numCols&quot;:6,&quot;reorder&quot;:false}]" GenerateInputFields="True" sap:VirtualizedContainerService.HintSize="334,402" sap2010:WorkflowViewState.IdRef="CreateFormTask_2" TaskOutput="[TaskObject]" TaskPriority="[TaskPriority.Medium]" TaskTitle="Image Classification Validation">
+                            <upaf:CreateFormTask.FormData>
+                              <InArgument x:TypeArguments="x:String" x:Key="imgPath_storage">[Path.GetFileName(item1)]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="class">[ResponseOutput("label").ToString]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="messageId">[MessageId]</InArgument>
+                              <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_ArrayClass">[OptionList]</InArgument>
+                            </upaf:CreateFormTask.FormData>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </upaf:CreateFormTask>
+                          <AddToCollection x:TypeArguments="upaf:FormTaskData" Collection="[out_TaskList]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_2" Item="[TaskObject]" />
+                          <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Boolean">[out_TaskCreated]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap:VirtualizedContainerService.HintSize="539,457" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Moving mails based on classification done by ML Model" DisplayName="Switch" Expression="[ResponseOutput(&quot;label&quot;).ToString.ToLower]" sap:VirtualizedContainerService.HintSize="497,213" sap2010:WorkflowViewState.IdRef="Switch`1_4">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:MoveOutlookMessage Account="{x:Null}" x:Key="car" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="MoveOutlookMessage_4" MailFolder="[in_Config(&quot;CarMailFolder&quot;).ToString]" MailMessage="[msg]" />
+                            <ui:MoveOutlookMessage Account="{x:Null}" x:Key="bike" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="MoveOutlookMessage_5" MailFolder="[in_Config(&quot;BikeMailFolder&quot;).ToString]" MailMessage="[msg]" />
+                            <ui:MoveOutlookMessage Account="{x:Null}" x:Key="bus" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="MoveOutlookMessage_6" MailFolder="[in_Config(&quot;BusMailFolder&quot;).ToString]" MailMessage="[msg]" />
+                          </Switch>
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke UploadNewData workflow" sap:VirtualizedContainerService.HintSize="497,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="UploadNewData.xaml">
+                            <ui:InvokeWorkflowFile.Arguments>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_Classification">[ResponseOutput("label").ToString]</InArgument>
+                              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config" />
+                              <InArgument x:TypeArguments="x:String" x:Key="in_FilePath">[item1]</InArgument>
+                            </ui:InvokeWorkflowFile.Arguments>
+                          </ui:InvokeWorkflowFile>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEach>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ForEach>
+  </Sequence>
+</Activity>

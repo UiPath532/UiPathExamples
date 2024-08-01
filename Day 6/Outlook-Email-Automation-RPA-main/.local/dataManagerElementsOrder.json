@@ -1,0 +1,30 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "counter&Sequence_1",
+        "varMailSender&Sequence_1",
+        "varMailSubject&Sequence_1",
+        "varListOfEmailAttrs&Sequence_1",
+        "varEmailErrorTemplate&Sequence_1",
+        "varErrorScreen&Sequence_1",
+        "varHasAttachments&Sequence_1",
+        "varEmailReport&Sequence_1",
+        "varEmailSuccessTemplate&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

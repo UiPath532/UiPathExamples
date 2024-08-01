@@ -1,0 +1,9 @@
+﻿Receipt ID: 47213527 | Receipt Date: 9 August 2022 | Price: $1.65 | Quantity: 12.66 Ltr | Sales: $20.89 | Total Sales: $20.89
+Receipt ID: 58462358 | Receipt Date: 23 August 2022 | Price: $1.44 | Quantity: 55.32 Ltr | Sales: $79.66 | Total Sales: $100.55
+Receipt ID: 18496352 | Receipt Date: 10 March 2023 | Price: $1.53 | Quantity: 55.32 Ltr | Sales: $84.64 | Total Sales: $185.19
+Receipt ID: 98598969 | Receipt Date: 16 May 2023 | Price: $1.59 | Quantity: 33.11 Ltr | Sales: $52.64 | Total Sales: $237.83
+Receipt ID: 85475826 | Receipt Date: 23 November 2023 | Price: $1.55 | Quantity: 7.10 Ltr | Sales: $11 | Total Sales: $248.83
+Receipt ID: 89658754 | Receipt Date: 4 July 2023 | Price: $1.70 | Quantity: 65.00 Ltr | Sales: $110.5 | Total Sales: $359.33
+Receipt ID: 84758496 | Receipt Date: 20 January 2023 | Price: $1.73 | Quantity: 21.00 Ltr | Sales: $36.33 | Total Sales: $395.66
+Receipt ID: 74859625 | Receipt Date: 25 February 2023 | Price: $1.69 | Quantity: 60.00 Ltr | Sales: $101.4 | Total Sales: $497.06
+Receipt ID: 95682635 | Receipt Date: 3 October 2023 | Price: $1.85 | Quantity: 5.00 Ltr | Sales: $9.25 | Total Sales: $506.31

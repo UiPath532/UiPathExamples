@@ -1,0 +1,36 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main_modern.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "varSales_str&Sequence_1",
+        "varRunningTotalOfSales&Sequence_1",
+        "varReceiptID&Sequence_1",
+        "varReceiptDate_str&Sequence_1",
+        "varPrice&Sequence_1",
+        "varQuantity&Sequence_1",
+        "varReceiptDate&Sequence_1",
+        "varOutputReportName&Sequence_1",
+        "varSales&Sequence_1",
+        "FullReceiptText&Sequence_1",
+        "ReceiptID_matches&Sequence_11",
+        "Price_matches&Sequence_11",
+        "ReceiptDate_matches&Sequence_11",
+        "Quantity_matches&Sequence_11",
+        "Sales_matches&Sequence_11"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

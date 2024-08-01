@@ -1,0 +1,70 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "UploadNewData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Classification",
+        "in_Config",
+        "in_FilePath"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "TaskList&Sequence_2",
+        "Config&Sequence_2",
+        "TaskCreated&Sequence_2",
+        "TaskObjectOut&Sequence_16",
+        "TaskAction&Sequence_22"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ReadMailAndImageClassification.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "MailMessage&Sequence_15",
+        "Attachments&Sequence_15",
+        "jsonResp&Sequence_15",
+        "jobj&Sequence_15",
+        "ResponseOutput&Sequence_15",
+        "MessageId&Sequence_7",
+        "TaskObject&Sequence_18",
+        "imagePath&Sequence_18",
+        "OptionList&Sequence_18"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "out_TaskList",
+        "out_TaskCreated"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "test.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "jsonResp&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    }
+  ]
+}

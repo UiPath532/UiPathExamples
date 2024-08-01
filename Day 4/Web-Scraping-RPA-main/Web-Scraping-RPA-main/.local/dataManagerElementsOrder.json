@@ -1,0 +1,49 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main_modern.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "varLocation&Sequence_6",
+        "dt_extract&Sequence_6",
+        "dt_str&Sequence_6",
+        "dt_filtered&Sequence_6"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main_classic.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "varLocation&Sequence_1",
+        "ExtractDataTable&Sequence_1",
+        "strDT&Sequence_1",
+        "newDT&Sequence_1",
+        "varPrice&Sequence_1",
+        "varBd&Sequence_1",
+        "varBa&Sequence_1",
+        "varAddress&Sequence_1",
+        "varArea&Sequence_1",
+        "filteredDT&Sequence_1",
+        "sortedDT&Sequence_1",
+        "varStreet&Sequence_1",
+        "varZIP&Sequence_1",
+        "varCity&Sequence_1",
+        "varPricePerSqft&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

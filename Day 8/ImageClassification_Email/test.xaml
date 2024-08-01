@@ -1,0 +1,129 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="test" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="390,372.333333333333" sap2010:WorkflowViewState.IdRef="test_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.MLServices;assembly=UiPath.MLServices" xmlns:uma="clr-namespace:UiPath.MLServices.Activities;assembly=UiPath.MLServices.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="56">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.MLServices</x:String>
+      <x:String>UiPath.MLServices.Enums</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.MLServices.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>InternalLabs_OutLook_to_PDF_Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="54">
+      <AssemblyReference>InternalLabs.OutLook_to_PDF.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Callout.Activity</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Form.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MLServices</AssemblyReference>
+      <AssemblyReference>UiPath.MLServices.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="test" sap:VirtualizedContainerService.HintSize="376,347.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="jsonResp" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[Directory.GetCurrentDirectory.ToString]" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="392,486.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uma:MLSkills ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Name="{x:Null}" NumberOfRetries="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SelectedMLSkill="{x:Reference __ReferenceID0}" StatusCode="{x:Null}" TimeOutMs="{x:Null}" ApiKey="44ab2993-00c5-4802-8eb7-ba79746af953" Connection="Endpoint" DisplayName="MLSkill" ExternApiFileType="File" sap:VirtualizedContainerService.HintSize="350,394.666666666667" sap2010:WorkflowViewState.IdRef="MLSkills_1" Item="C:\Users\Nikhilesh.Mishra\Desktop\image\istockphoto-1020497846-1024x1024.jpg" JsonResponse="[jsonResp]" NextPageNum="2" RefreshList="False" SkillURL="https://ai-stg-uipath.deskover.com/public/mlskills/e036e5ba-67e6-412d-977f-cbd6d8a4008d/5444607b-3595-4d07-ac65-1bfffedffa59/imageclassification-retrained" TotalCount="8">
+            <uma:MLSkills.MLSkillList>
+              <scg:List x:TypeArguments="um:MLSkill" Capacity="8">
+                <um:MLSkill AccessUri="https://ai-stg-uipath.deskover.com/mlskills/e036e5ba-67e6-412d-977f-cbd6d8a4008d/5444607b-3595-4d07-ac65-1bfffedffa59/carmodelclassifier" AccountId="e036e5ba-67e6-412d-977f-cbd6d8a4008d" Description="" Id="0a47d24a-9eb2-4f4b-b4b5-8f7733d93157" InputDescription="" InputType="FILE" Name="carModelClassifier" OutputDescription="" ProjectId="f2babceb-2c69-49e5-973c-ede0b3db6945" TenantId="5444607b-3595-4d07-ac65-1bfffedffa59" />
+                <um:MLSkill AccessUri="https://ai-stg-uipath.deskover.com/mlskills/e036e5ba-67e6-412d-977f-cbd6d8a4008d/5444607b-3595-4d07-ac65-1bfffedffa59/image-clf-9-1" AccountId="e036e5ba-67e6-412d-977f-cbd6d8a4008d" Description="" Id="df377d8d-f892-422a-93c4-12369f763a76" InputDescription="" InputType="FILE" Name="image_clf_9_1" OutputDescription="" ProjectId="f2babceb-2c69-49e5-973c-ede0b3db6945" TenantId="5444607b-3595-4d07-ac65-1bfffedffa59" />
+                <um:MLSkill x:Name="__ReferenceID0" AccessUri="https://ai-stg-uipath.deskover.com/mlskills/e036e5ba-67e6-412d-977f-cbd6d8a4008d/5444607b-3595-4d07-ac65-1bfffedffa59/imageclassification-v4" AccountId="e036e5ba-67e6-412d-977f-cbd6d8a4008d" Description="" Id="183ff5e1-e9d5-463a-aa3e-d865da43433b" InputDescription="Full path of the image file on which you want to classify.&#xA;Make sure that the image format is either JPEG or PNG." InputType="FILE" Name="imageClassification_v4" OutputDescription="JSON with identified label for the image and confidence score (between 0-1)." ProjectId="6002e5b4-46fc-44a3-8edb-507e89f491ec" TenantId="5444607b-3595-4d07-ac65-1bfffedffa59" />
+                <um:MLSkill AccessUri="https://ai-stg-uipath.deskover.com/mlskills/e036e5ba-67e6-412d-977f-cbd6d8a4008d/5444607b-3595-4d07-ac65-1bfffedffa59/imageclassificationv3" AccountId="e036e5ba-67e6-412d-977f-cbd6d8a4008d" Description="" Id="a9f73360-024e-4b91-a307-51d750f8174b" InputDescription="Full path of the image file on which you want to classify.&#xA;Make sure that the image format is either JPEG or PNG." InputType="FILE" Name="ImageClassificationV3" OutputDescription="JSON with identified label for the image and confidence score (between 0-1)." ProjectId="6002e5b4-46fc-44a3-8edb-507e89f491ec" TenantId="5444607b-3595-4d07-ac65-1bfffedffa59" />
+                <um:MLSkill AccessUri="https://ai-stg-uipath.deskover.com/mlskills/e036e5ba-67e6-412d-977f-cbd6d8a4008d/5444607b-3595-4d07-ac65-1bfffedffa59/imageclassifierv3" AccountId="e036e5ba-67e6-412d-977f-cbd6d8a4008d" Description="" Id="47e8b727-5347-426a-a18a-65367453e698" InputDescription="Full path of the image file on which you want to classify.&#xA;Make sure that the image format is either JPEG or PNG." InputType="FILE" Name="ImageClassifierv3" OutputDescription="JSON with identified label for the image and confidence score (between 0-1)." ProjectId="6002e5b4-46fc-44a3-8edb-507e89f491ec" TenantId="5444607b-3595-4d07-ac65-1bfffedffa59" />
+                <um:MLSkill AccessUri="https://ai-stg-uipath.deskover.com/mlskills/e036e5ba-67e6-412d-977f-cbd6d8a4008d/5444607b-3595-4d07-ac65-1bfffedffa59/pretrainedner18" AccountId="e036e5ba-67e6-412d-977f-cbd6d8a4008d" Description="" Id="b4cfc3bd-1a26-486b-bd1e-fcb20f6915c9" InputDescription="Text in English from which entities will be extracted." InputType="JSON" Name="PreTrainedNER18" OutputDescription="List of named entities in the text. Each elemnt in the list has the text that was recognized, the starting and ending positions (character-wise) of the text, the type of named entity and the confidence in that prediction. For example: [ {&quot;text&quot;: &quot;George Washington&quot;,&quot;start_pos&quot;: 0,&quot;end_pos&quot;: 17,&quot;type&quot;: &quot;PER&quot;,&quot;confidence&quot;: 0.96469810605049133 }, {&quot;text&quot;: &quot;New York City&quot;,&quot;start_pos&quot;: 26,&quot;end_pos&quot;: 39,&quot;type&quot;: &quot;LOC&quot;,&quot;confidence&quot;: 0.944470226764679 }, {&quot;text&quot;: &quot;Congress&quot;,&quot;start_pos&quot;: 51,&quot;end_pos&quot;: 59,&quot;type&quot;: &quot;ORG&quot;,&quot;confidence&quot;: 0.99666249752044678 }]" ProjectId="3d0a02ba-e8fd-49a2-91df-b04740f02e61" TenantId="5444607b-3595-4d07-ac65-1bfffedffa59" />
+                <um:MLSkill AccessUri="https://ai-stg-uipath.deskover.com/mlskills/e036e5ba-67e6-412d-977f-cbd6d8a4008d/5444607b-3595-4d07-ac65-1bfffedffa59/semantic-similarity" AccountId="e036e5ba-67e6-412d-977f-cbd6d8a4008d" Description="assuming one string and one list, reference is one string, which means we only accept one reference &quot;sentence&quot;, not multiple, candidates is a list of &#xA;        candidate sentences&#xA;        threshold is optional, but can be given by user, it is a number between 0 and 1&#xA;        {&quot;reference&quot;: string, &quot;candidates&quot;: [strings], (&quot;threshold&quot;: #)}" Id="c717a017-09b1-4a57-b3a9-1d7a6f17c3e8" InputDescription="assuming one string and one list, reference is one string, which means we only accept one reference &quot;sentence&quot;, not multiple, candidates is a list of candidate sentences&#xA; &#xA;{&quot;reference&quot;: string, &quot;candidates&quot;: [strings]}" InputType="JSON" Name="semantic_similarity" OutputDescription="" ProjectId="71a0c972-037a-4bf9-8100-bd1d5345ceee" TenantId="5444607b-3595-4d07-ac65-1bfffedffa59" />
+                <um:MLSkill AccessUri="https://ai-stg-uipath.deskover.com/mlskills/e036e5ba-67e6-412d-977f-cbd6d8a4008d/5444607b-3595-4d07-ac65-1bfffedffa59/smartemail-classification" AccountId="e036e5ba-67e6-412d-977f-cbd6d8a4008d" Description="" Id="41205083-386a-4245-8dfd-d96143d075bc" InputDescription="Text to be classified as String: 'I loved this movie.'" InputType="JSON" Name="SmartEmail_Classification" OutputDescription="JSON with pedicted class name, associated confidence on that class prediction (between 0-1).  For example: {\&quot;prediction\&quot;: \&quot;Positive\&quot;, \&quot;confidence\&quot;: 0.9422031841278076,}" ProjectId="5622d645-3e58-45d4-90bc-d0958aca45cd" TenantId="5444607b-3595-4d07-ac65-1bfffedffa59" />
+              </scg:List>
+            </uma:MLSkills.MLSkillList>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uma:MLSkills>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[jsonResp]" />
+  </Sequence>
+</Activity>

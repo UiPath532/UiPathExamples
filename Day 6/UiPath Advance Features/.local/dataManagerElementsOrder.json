@@ -1,0 +1,59 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Number&Sequence_1",
+        "SumSquare&Sequence_1",
+        "SumPythonObject&Sequence_2",
+        "SumUipathObject&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CodeStage.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "vData&Sequence_1",
+        "vDtResult&Sequence_1",
+        "vProduct&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "PowerShell.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "PSScript&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "PythonSolution.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "MathFunctions&Sequence_1",
+        "SumResultPython&Sequence_1",
+        "Result&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
